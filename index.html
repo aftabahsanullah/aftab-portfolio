@@ -3,99 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftab Ahsan Ullah | VIP Executive</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Aftab Ahsanullah | Executive Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #050505; color: #fff; overflow-x: hidden; }
+        body { background: #020617; color: #f8fafc; overflow-x: hidden; }
+
+        /* Animated Background */
+        .glass-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, #0f172a, #1e293b); z-index: -1; }
+        .circle { position: absolute; width: 300px; height: 300px; background: rgba(100, 255, 218, 0.1); border-radius: 50%; filter: blur(80px); animation: move 10s infinite alternate; }
+
+        @keyframes move { from { transform: translate(0, 0); } to { transform: translate(100px, 100px); } }
+
+        .container { max-width: 900px; margin: 60px auto; padding: 20px; }
+
+        /* Header Section */
+        .profile-card { text-align: center; padding: 50px; background: rgba(30, 41, 59, 0.5); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(15px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); margin-bottom: 40px; }
         
-        /* Neon Background Effect */
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a2a6c 0%, #050505 100%); z-index: -1; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; font-weight: 700; background: linear-gradient(to right, #64ffda, #00d2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; margin-bottom: 10px; }
+        .role { font-size: 1.2rem; letter-spacing: 4px; color: #94a3b8; text-transform: uppercase; margin-bottom: 30px; }
 
-        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+        /* Action Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: 0.4s; display: flex; align-items: center; gap: 10px; }
+        
+        .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 0 30px #25D366; }
+        
+        .btn-email { background: #ea4335; color: white; box-shadow: 0 10px 20px rgba(234, 67, 53, 0.3); }
+        .btn-email:hover { transform: scale(1.05); box-shadow: 0 0 30px #ea4335; }
 
-        /* Header Show-off */
-        .hero { text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); margin-bottom: 40px; box-shadow: 0 0 50px rgba(100, 255, 218, 0.1); }
-        .hero h1 { font-size: 4rem; font-weight: 800; text-transform: uppercase; background: linear-gradient(90deg, #64ffda, #48cae4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; }
-        .hero p { font-size: 1.5rem; color: #8892b0; margin-top: 10px; font-weight: 300; }
+        /* Content Section */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } h1 { font-size: 2.2rem; } }
 
-        /* Stats Section */
-        .stats { display: flex; justify-content: space-around; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
-        .stat-card { background: #112240; padding: 25px; border-radius: 15px; text-align: center; flex: 1; min-width: 200px; border-bottom: 4px solid #64ffda; }
-        .stat-card h2 { font-size: 2rem; color: #64ffda; }
-        .stat-card p { font-size: 0.9rem; color: #ccd6f6; }
+        .card { background: rgba(30, 41, 59, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(100, 255, 218, 0.2); transition: 0.3s; }
+        .card:hover { border-color: #64ffda; transform: translateY(-5px); }
+        h3 { color: #64ffda; margin-bottom: 15px; font-family: 'Orbitron', sans-serif; font-size: 1rem; }
 
-        /* Experience Grid */
-        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+        .skill-tag { display: inline-block; background: rgba(100, 255, 218, 0.1); color: #64ffda; padding: 6px 15px; border-radius: 5px; margin: 5px; font-size: 0.8rem; border: 1px solid rgba(100, 255, 218, 0.3); }
 
-        .card { background: rgba(17, 34, 64, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(100, 255, 218, 0.2); margin-bottom: 30px; }
-        h3 { color: #64ffda; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase; }
-
-        .skill-box { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-badge { background: #64ffda; color: #0a192f; padding: 8px 15px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; }
-
-        .contact-btn { display: inline-block; background: transparent; border: 2px solid #64ffda; color: #64ffda; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        .contact-btn:hover { background: #64ffda; color: #0a192f; box-shadow: 0 0 20px #64ffda; }
+        .edu-item { border-left: 2px solid #64ffda; padding-left: 15px; margin-bottom: 15px; }
+        .edu-item b { color: #f1f5f9; display: block; }
+        .edu-item span { color: #94a3b8; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<div class="bg-glow"></div>
+<div class="glass-bg"></div>
+<div class="circle" style="top: 10%; left: 10%;"></div>
+<div class="circle" style="bottom: 10%; right: 10%; background: rgba(0, 210, 255, 0.1);"></div>
 
 <div class="container">
-    <div class="hero">
-        <h1>AFTAB AHSAN</h1>
-        <p>Admin & Operations Executive</p>
-        <a href="mailto:memonaftab583@gmail.com" class="contact-btn">Hiring Me? Get In Touch</a>
+    <div class="profile-card">
+        <h1>AFTAB AHSANULLAH</h1>
+        <p class="role">Admin & Operations Executive</p>
+        
+        <div class="btn-group">
+            <a href="https://wa.me/923030166765" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
+            </a>
+            <a href="mailto:memonaftab583@gmail.com" class="btn btn-email">
+                <i class="fas fa-envelope"></i> Send Email
+            </a>
+        </div>
     </div>
 
-    <div class="stats">
-        <div class="stat-card"><h2>14+</h2><p>Years of Education</p></div>
-        <div class="stat-card"><h2>100%</h2><p>Digital Proficiency</p></div>
-        <div class="stat-card"><h2>DHA</h2><p>Karachi Resident</p></div>
+    <div class="info-grid">
+        <div class="card">
+            <h3><i class="fas fa-graduation-cap"></i> Academic Profile</h3>
+            <div class="edu-item">
+                <b>B.A / ADA (14 Years)</b>
+                <span>Benazir Bhutto Shaheed University Lyari</span>
+            </div>
+            <div class="edu-item">
+                <b>Intermediate</b>
+                <span>BIEK, Karachi</span>
+            </div>
+            <p style="font-size: 0.8rem; color: #64748b; margin-top: 10px;"><i class="fas fa-map-marker-alt"></i> Based in DHA, Karachi</p>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-laptop-code"></i> Technical Arsenal</h3>
+            <div class="skill-tag">Advanced MS Excel</div>
+            <div class="skill-tag">MS Word & PPT</div>
+            <div class="skill-tag">Urdu Inpage</div>
+            <div class="skill-tag">CorelDRAW (Basic)</div>
+            <div class="skill-tag">Data Management</div>
+            <div class="skill-tag">Office Admin</div>
+        </div>
     </div>
 
-    <div class="grid">
-        <div class="left">
-            <div class="card">
-                <h3>Executive Summary</h3>
-                <p style="color: #8892b0;">Graduate of BBSU Lyari with a passion for streamlining corporate operations. Expert in data governance, digital documentation, and administrative strategy. Ready to lead office workflows with precision and professional integrity.</p>
-            </div>
-            
-            <div class="card">
-                <h3>Academic Background</h3>
-                <div style="margin-bottom: 15px;">
-                    <h4 style="color: #ccd6f6;">Associate Degree in Arts (B.A)</h4>
-                    <p style="font-size: 0.9rem;">Benazir Bhutto Shaheed University Lyari</p>
-                </div>
-                <div>
-                    <h4 style="color: #ccd6f6;">Intermediate Certification</h4>
-                    <p style="font-size: 0.9rem;">BIEK Karachi</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="card">
-                <h3>Core Arsenal</h3>
-                <div class="skill-box">
-                    <span class="skill-badge">ADVANCED EXCEL</span>
-                    <span class="skill-badge">MS WORD</span>
-                    <span class="skill-badge">URDU INPAGE</span>
-                    <span class="skill-badge">CORELDRAW</span>
-                    <span class="skill-badge">DATA ENTRY</span>
-                    <span class="skill-badge">OFFICE MGMT</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Contact</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-phone"></i> +92 303 0166765</p>
-                <p style="font-size: 0.9rem;"><i class="fas fa-map-marker-alt"></i> DHA, Karachi</p>
-            </div>
-        </div>
+    <div class="card" style="margin-top: 20px; text-align: center;">
+        <h3>Professional Vision</h3>
+        <p style="color: #94a3b8;">Leveraging my graduation and 100% digital proficiency to streamline administrative operations and drive organizational growth in a fast-paced corporate environment.</p>
     </div>
 </div>
 
