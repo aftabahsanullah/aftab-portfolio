@@ -3,40 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftab Ahsan Ullah | Executive Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Aftab Ahsan Ullah | VIP Executive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --navy: #0a192f; --cyan: #64ffda; --white: #ccd6f6; --slate: #8892b0; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--navy); color: var(--slate); padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: #112240; padding: 40px; border-radius: 10px; border-top: 4px solid var(--cyan); }
-        h1 { color: var(--white); font-size: 2.5rem; }
-        .role { color: var(--cyan); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
-        .contact { margin: 20px 0; color: var(--white); border-bottom: 1px solid #233554; padding-bottom: 20px; }
-        h3 { color: var(--white); margin: 25px 0 10px; border-left: 3px solid var(--cyan); padding-left: 10px; }
-        .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: rgba(100, 255, 218, 0.1); color: var(--cyan); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--cyan); font-size: 0.8rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #050505; color: #fff; overflow-x: hidden; }
+        
+        /* Neon Background Effect */
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a2a6c 0%, #050505 100%); z-index: -1; }
+
+        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+
+        /* Header Show-off */
+        .hero { text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); margin-bottom: 40px; box-shadow: 0 0 50px rgba(100, 255, 218, 0.1); }
+        .hero h1 { font-size: 4rem; font-weight: 800; text-transform: uppercase; background: linear-gradient(90deg, #64ffda, #48cae4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; }
+        .hero p { font-size: 1.5rem; color: #8892b0; margin-top: 10px; font-weight: 300; }
+
+        /* Stats Section */
+        .stats { display: flex; justify-content: space-around; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+        .stat-card { background: #112240; padding: 25px; border-radius: 15px; text-align: center; flex: 1; min-width: 200px; border-bottom: 4px solid #64ffda; }
+        .stat-card h2 { font-size: 2rem; color: #64ffda; }
+        .stat-card p { font-size: 0.9rem; color: #ccd6f6; }
+
+        /* Experience Grid */
+        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+
+        .card { background: rgba(17, 34, 64, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(100, 255, 218, 0.2); margin-bottom: 30px; }
+        h3 { color: #64ffda; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase; }
+
+        .skill-box { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-badge { background: #64ffda; color: #0a192f; padding: 8px 15px; border-radius: 50px; font-weight: 600; font-size: 0.8rem; }
+
+        .contact-btn { display: inline-block; background: transparent; border: 2px solid #64ffda; color: #64ffda; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
+        .contact-btn:hover { background: #64ffda; color: #0a192f; box-shadow: 0 0 20px #64ffda; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>AFTAB AHSAN ULLAH</h1>
-        <p class="role">Admin & Operations Executive</p>
-        <div class="contact">
-            <p><i class="fas fa-phone"></i> +92 303 0166765</p>
-            <p><i class="fas fa-envelope"></i> memonaftab583@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> DHA, Karachi</p>
+
+<div class="bg-glow"></div>
+
+<div class="container">
+    <div class="hero">
+        <h1>AFTAB AHSAN</h1>
+        <p>Admin & Operations Executive</p>
+        <a href="mailto:memonaftab583@gmail.com" class="contact-btn">Hiring Me? Get In Touch</a>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card"><h2>14+</h2><p>Years of Education</p></div>
+        <div class="stat-card"><h2>100%</h2><p>Digital Proficiency</p></div>
+        <div class="stat-card"><h2>DHA</h2><p>Karachi Resident</p></div>
+    </div>
+
+    <div class="grid">
+        <div class="left">
+            <div class="card">
+                <h3>Executive Summary</h3>
+                <p style="color: #8892b0;">Graduate of BBSU Lyari with a passion for streamlining corporate operations. Expert in data governance, digital documentation, and administrative strategy. Ready to lead office workflows with precision and professional integrity.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Academic Background</h3>
+                <div style="margin-bottom: 15px;">
+                    <h4 style="color: #ccd6f6;">Associate Degree in Arts (B.A)</h4>
+                    <p style="font-size: 0.9rem;">Benazir Bhutto Shaheed University Lyari</p>
+                </div>
+                <div>
+                    <h4 style="color: #ccd6f6;">Intermediate Certification</h4>
+                    <p style="font-size: 0.9rem;">BIEK Karachi</p>
+                </div>
+            </div>
         </div>
-        <h3>Education</h3>
-        <p><strong>B.A / ADA (14 Years Education)</strong><br>Benazir Bhutto Shaheed University Lyari</p>
-        <h3>Expertise</h3>
-        <div class="skills">
-            <div class="skill-tag">Advanced MS Excel</div>
-            <div class="skill-tag">MS Word</div>
-            <div class="skill-tag">Urdu Inpage</div>
-            <div class="skill-tag">Data Management</div>
-            <div class="skill-tag">CorelDRAW</div>
+
+        <div class="right">
+            <div class="card">
+                <h3>Core Arsenal</h3>
+                <div class="skill-box">
+                    <span class="skill-badge">ADVANCED EXCEL</span>
+                    <span class="skill-badge">MS WORD</span>
+                    <span class="skill-badge">URDU INPAGE</span>
+                    <span class="skill-badge">CORELDRAW</span>
+                    <span class="skill-badge">DATA ENTRY</span>
+                    <span class="skill-badge">OFFICE MGMT</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Contact</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;"><i class="fas fa-phone"></i> +92 303 0166765</p>
+                <p style="font-size: 0.9rem;"><i class="fas fa-map-marker-alt"></i> DHA, Karachi</p>
+            </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
