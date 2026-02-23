@@ -3,101 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftab Ahsanullah | Executive Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>AFTAB | Executive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #020617; color: #f8fafc; overflow-x: hidden; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #000; color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
 
-        /* Animated Background */
-        .glass-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, #0f172a, #1e293b); z-index: -1; }
-        .circle { position: absolute; width: 300px; height: 300px; background: rgba(100, 255, 218, 0.1); border-radius: 50%; filter: blur(80px); animation: move 10s infinite alternate; }
+        /* Luxury Gradient Background */
+        .bg-gradient {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 30%, #1e293b 0%, #000 100%);
+            z-index: -1;
+        }
 
-        @keyframes move { from { transform: translate(0, 0); } to { transform: translate(100px, 100px); } }
+        .container { max-width: 800px; margin: 80px auto; padding: 20px; text-align: center; }
 
-        .container { max-width: 900px; margin: 60px auto; padding: 20px; }
+        /* The "AFTAB" Branding */
+        .name-container { margin-bottom: 40px; }
+        .name-link { text-decoration: none; cursor: pointer; }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 6rem;
+            font-weight: 900;
+            letter-spacing: 15px;
+            background: linear-gradient(to bottom, #fff 30%, #64ffda 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 0.5s;
+            text-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+        }
+        h1:hover { transform: scale(1.05); text-shadow: 0 0 50px rgba(100, 255, 218, 0.5); }
 
-        /* Header Section */
-        .profile-card { text-align: center; padding: 50px; background: rgba(30, 41, 59, 0.5); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(15px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); margin-bottom: 40px; }
-        
-        h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; font-weight: 700; background: linear-gradient(to right, #64ffda, #00d2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; margin-bottom: 10px; }
-        .role { font-size: 1.2rem; letter-spacing: 4px; color: #94a3b8; text-transform: uppercase; margin-bottom: 30px; }
+        .tagline {
+            font-size: 1rem;
+            letter-spacing: 8px;
+            color: #8892b0;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
 
-        /* Action Buttons */
-        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: 0.4s; display: flex; align-items: center; gap: 10px; }
-        
-        .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
-        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 0 30px #25D366; }
-        
-        .btn-email { background: #ea4335; color: white; box-shadow: 0 10px 20px rgba(234, 67, 53, 0.3); }
-        .btn-email:hover { transform: scale(1.05); box-shadow: 0 0 30px #ea4335; }
+        /* Minimal Info Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+        }
 
-        /* Content Section */
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } h1 { font-size: 2.2rem; } }
+        .section h3 { color: #64ffda; font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase; }
+        .section p { color: #ccd6f6; line-height: 1.8; font-size: 0.9rem; }
 
-        .card { background: rgba(30, 41, 59, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(100, 255, 218, 0.2); transition: 0.3s; }
-        .card:hover { border-color: #64ffda; transform: translateY(-5px); }
-        h3 { color: #64ffda; margin-bottom: 15px; font-family: 'Orbitron', sans-serif; font-size: 1rem; }
+        /* Interactive Icons */
+        .contact-footer { margin-top: 50px; display: flex; justify-content: center; gap: 30px; }
+        .icon-link { color: #64ffda; font-size: 1.5rem; transition: 0.3s; text-decoration: none; }
+        .icon-link:hover { color: #fff; transform: translateY(-5px); }
 
-        .skill-tag { display: inline-block; background: rgba(100, 255, 218, 0.1); color: #64ffda; padding: 6px 15px; border-radius: 5px; margin: 5px; font-size: 0.8rem; border: 1px solid rgba(100, 255, 218, 0.3); }
-
-        .edu-item { border-left: 2px solid #64ffda; padding-left: 15px; margin-bottom: 15px; }
-        .edu-item b { color: #f1f5f9; display: block; }
-        .edu-item span { color: #94a3b8; font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; letter-spacing: 5px; }
+            .glass-card { grid-template-columns: 1fr; padding: 25px; }
+        }
     </style>
 </head>
 <body>
 
-<div class="glass-bg"></div>
-<div class="circle" style="top: 10%; left: 10%;"></div>
-<div class="circle" style="bottom: 10%; right: 10%; background: rgba(0, 210, 255, 0.1);"></div>
+<div class="bg-gradient"></div>
 
 <div class="container">
-    <div class="profile-card">
-        <h1>AFTAB AHSANULLAH</h1>
-        <p class="role">Admin & Operations Executive</p>
-        
-        <div class="btn-group">
-            <a href="https://wa.me/923030166765" target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> WhatsApp Me
-            </a>
-            <a href="mailto:memonaftab583@gmail.com" class="btn btn-email">
-                <i class="fas fa-envelope"></i> Send Email
-            </a>
+    <div class="name-container">
+        <a href="https://wa.me/923030166765" class="name-link" target="_blank">
+            <h1>AFTAB</h1>
+        </a>
+        <p class="tagline">Admin & Operations Executive</p>
+    </div>
+
+    <div class="glass-card">
+        <div class="section">
+            <h3>Education</h3>
+            <p><b>B.A / ADA</b><br>BBSU Lyari, Karachi</p>
+            <p style="margin-top: 10px;"><b>Intermediate</b><br>BIEK Karachi</p>
+        </div>
+        <div class="section">
+            <h3>Expertise</h3>
+            <p>• Advanced MS Excel<br>• MS Word & PPT<br>• Urdu Inpage<br>• CorelDRAW</p>
         </div>
     </div>
 
-    <div class="info-grid">
-        <div class="card">
-            <h3><i class="fas fa-graduation-cap"></i> Academic Profile</h3>
-            <div class="edu-item">
-                <b>B.A / ADA (14 Years)</b>
-                <span>Benazir Bhutto Shaheed University Lyari</span>
-            </div>
-            <div class="edu-item">
-                <b>Intermediate</b>
-                <span>BIEK, Karachi</span>
-            </div>
-            <p style="font-size: 0.8rem; color: #64748b; margin-top: 10px;"><i class="fas fa-map-marker-alt"></i> Based in DHA, Karachi</p>
-        </div>
-
-        <div class="card">
-            <h3><i class="fas fa-laptop-code"></i> Technical Arsenal</h3>
-            <div class="skill-tag">Advanced MS Excel</div>
-            <div class="skill-tag">MS Word & PPT</div>
-            <div class="skill-tag">Urdu Inpage</div>
-            <div class="skill-tag">CorelDRAW (Basic)</div>
-            <div class="skill-tag">Data Management</div>
-            <div class="skill-tag">Office Admin</div>
-        </div>
-    </div>
-
-    <div class="card" style="margin-top: 20px; text-align: center;">
-        <h3>Professional Vision</h3>
-        <p style="color: #94a3b8;">Leveraging my graduation and 100% digital proficiency to streamline administrative operations and drive organizational growth in a fast-paced corporate environment.</p>
+    <div class="contact-footer">
+        <a href="https://wa.me/923030166765" class="icon-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:memonaftab583@gmail.com" class="icon-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <span class="icon-link"><i class="fas fa-map-marker-alt"></i> DHA, Karachi</span>
     </div>
 </div>
 
